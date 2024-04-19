@@ -67,7 +67,7 @@ class Hill_Model:
             'Lse' : Lse,
         'Lce' : Lce
         }
-
+  
         df = pd.DataFrame(data)
 
         print(df)
@@ -141,7 +141,8 @@ class Hill_Model:
 
         for idx, df in enumerate(dfs):
             ax1.plot(df['t'], df['L'], color='C'+str(idx), label=f'Length {idx+1}')            
-            ax2.plot(df['t'], df['H'], color='C'+str(idx), label=f'Heat {idx+1}')
+            #ax2.plot(df['t'], df['H'], color='C'+str(idx), label=f'Heat {idx+1}')
+            ax2.plot(df['t'], df['P'], color='C'+str(idx), label=f'Force {idx+1}')
 
 
         ax1.set_xlabel('Tempo (s)')
